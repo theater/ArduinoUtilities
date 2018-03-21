@@ -2,11 +2,9 @@
 
 #include "DS18B20AddressFinder.h"
 
-#include <DallasTemperature.h>
 #include <HardwareSerial.h>
 #include <OneWire.h>
 #include <WString.h>
-#include <Util.h>
 
 #define ONE_WIRE_PIN_01 5
 #define BAUD_RATE 115200
@@ -15,20 +13,34 @@
 OneWire oneWire(ONE_WIRE_PIN_01);
 DallasTemperature owSensors(&oneWire);
 
-void local::printOneWireAddresses(DallasTemperature* owSensors) {
+void log(String severity, String data) {
+	Serial.println(severity +": " + data);
+}
+
+void logInfo(String data) {
+	log("INFO", data);
+}
+
+void printDeviceAddress(int index, DallasTemperature* owSensors) {
+	DeviceAddress deviceAddress;
+	owSensors->getAddress(deviceAddress, index);
+	Serial.print("INFO: Device " + String(index) + ": ");
+	for (int j = 0; j < 8; j++) {
+		Serial.print("0x");
+		Serial.print(deviceAddress[j], HEX);
+		Serial.print(j == 7 ? ".\n" : ", ");
+	}
+}
+
+void printOneWireAddressesAndTemperatures(DallasTemperature* owSensors) {
 	int count = owSensors->getDeviceCount();
-	logDebug("Found " + String(count) + (count == 1 ? " device" : " devices"));
-	for (int i = 0; i < count; i++) {
-		DeviceAddress deviceAddress;
-		owSensors->getAddress(deviceAddress, i);
-			Serial.print("Device " + String(i) + ": ");
-		for (int j = 0; j < 8; j++) {
-			Serial.print("0x");
-			Serial.print(deviceAddress[j], HEX);
-			Serial.print(j==7 ? ".\n" : ", ");
-		}
-		float tempSensor = owSensors->getTempCByIndex(i);
-		logDebug("DS18B20 Sensor " + String(i) + " temperature: " + String(tempSensor) + "C");
+	logInfo("Found " + String(count) + (count == 1 ? " device" : " devices\n"));
+	owSensors->requestTemperatures();
+	delay(200);
+	for (int index = 0; index < count; index++) {
+		printDeviceAddress(index, owSensors);
+		float tempSensor = owSensors->getTempCByIndex(index);
+		logInfo("DS18B20 Sensor " + String(index) + " temperature: " + String(tempSensor) + "C\n");
 	}
 }
 
@@ -37,19 +49,20 @@ void local::printOneWireAddresses(DallasTemperature* owSensors) {
 void setup()
 {
 	Serial.begin(BAUD_RATE);
-		logDebug("Beginning setup()...");
+		logInfo("Beginning setup()...");
 
-		logDebug("Waiting 2000 ms...");
+		logInfo("Waiting 2000 ms...");
 		delay(2000);
 
-		logDebug("Update sensors...");
+		logInfo("Update sensors...");
 		owSensors.begin();
-		local::printOneWireAddresses(&owSensors);
+		delay(100);
+		printOneWireAddressesAndTemperatures(&owSensors);
 }
 
 // The loop function is called in an endless loop
 void loop()
 {
 	delay(10000);
-	local::printOneWireAddresses(&owSensors);
+	printOneWireAddressesAndTemperatures(&owSensors);
 }

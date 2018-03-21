@@ -51,20 +51,5 @@
 			<type>2</type>
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/OneWire/2.3.3</locationURI>
 		</link>
-		<link>
-			<name>libraries/PubSubClient</name>
-			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/PubSubClient/2.6.0</locationURI>
-		</link>
-		<link>
-			<name>libraries/Room</name>
-			<type>2</type>
-			<location>D:/src/ArduinoMega/Library/Room</location>
-		</link>
-		<link>
-			<name>libraries/UIPEthernet</name>
-			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/UIPEthernet/2.0.4</locationURI>
-		</link>
 	</linkedResources>
 </projectDescription>

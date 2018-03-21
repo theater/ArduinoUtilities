@@ -23,11 +23,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/DallasTemperature}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/OneWire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/Room}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.601145859" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -37,11 +32,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/DallasTemperature}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/OneWire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/Room}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.2039124876" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -51,11 +41,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/DallasTemperature}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/OneWire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/Room}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/PubSubClient/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DS18B20AddressFinder/libraries/UIPEthernet/utility}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.1823744247" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
@@ -81,4 +66,5 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

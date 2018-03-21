@@ -15,10 +15,9 @@
 
 
 //add your function definitions for the project DS18B20AddressFinder here
-namespace local {
-	void printOneWireAddresses(DallasTemperature* owSensors);
-}
-
+void printOneWireAddressesAndTemperatures(DallasTemperature* owSensors);
+void log(String severity, String data);
+void logInfo(String data);
 
 //Do not add code below this line
 #endif /* _DS18B20AddressFinder_H_ */
